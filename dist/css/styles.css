@@ -11027,3 +11027,115 @@ p {
 .address strong {
   font-size: 1.2rem;
 }
+
+/* Custom Aesthetic Tweaks Mocco */
+html {
+  scroll-behavior: smooth;
+}
+.intro-img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.intro-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.intro-text p, .cta-inner p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(230, 167, 86, 0.4);
+}
+
+.site-heading-lower {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.bg-faded {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  border: 1px solid rgba(230, 167, 86, 0.2);
+}
+
+/* GDPR Custom Cookie Banner Styles */
+.cookie-banner-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(33, 37, 41, 0.98);
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+  z-index: 9999;
+  padding: 1.5rem 0;
+  border-top: 2px solid var(--bs-primary);
+  opacity: 0;
+  transform: translateY(100%);
+  animation: slideUpCookie 0.8s forwards 0.5s;
+}
+
+.cookie-banner-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .cookie-banner-content {
+    text-align: left;
+  }
+}
+
+@keyframes slideUpCookie {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HIGH CONVERSION: Floating WhatsApp Button */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    animation: pulse-wa 2s infinite;
+}
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+    color: white;
+}
+.floating-whatsapp svg {
+    margin-top: 1px;
+}
+@keyframes pulse-wa {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* Pulsing highlight for primary CTA */
+.btn-pulse {
+    animation: btn-pulse-anim 2s infinite;
+}
+@keyframes btn-pulse-anim {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(230, 167, 86, 0.7); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); box-shadow: 0 0 0 10px rgba(230, 167, 86, 0); }
+}
